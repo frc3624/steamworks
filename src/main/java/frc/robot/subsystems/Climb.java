@@ -27,7 +27,7 @@ public class Climb extends SubsystemBase {
   public void set(double speed) {
     /*
      * The climb subsystem was designed in such a way that it can only rotate in one way.
-     * If it tries to rotate backwards, in the negative voltage direction (as in climbMotor.set(-1)),
+     * If it tries to rotate backwards (in the negative voltage direction like climbMotor.set(-1)),
      * it will break.
      * We can use the fact that climbMotor is a private variable to our advantage. This method is the only way
      * it is exposed to other places, so we can make sure it doesn't break by not letting anyone set speed to a negative value.

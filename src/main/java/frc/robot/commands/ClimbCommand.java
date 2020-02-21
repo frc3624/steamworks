@@ -33,11 +33,13 @@ public class ClimbCommand extends CommandBase {
     climb.set(0);
   }
 
-  /* We dont want this command to self-terminate. We only want this command to end when it is interrupted
+  /* 
+   * We dont want this command to self-terminate. We only want this command to end when it is interrupted
    * Since we used joystickButton.whileHeld() for this command, it gets interrupted once the button is released.
    */
   @Override
   public boolean isFinished() {
     return false;
   }
+  
 }

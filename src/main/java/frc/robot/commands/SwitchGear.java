@@ -32,4 +32,5 @@ public class SwitchGear extends CommandBase {
   public boolean isFinished() {
     return true;
   }
+  
 }

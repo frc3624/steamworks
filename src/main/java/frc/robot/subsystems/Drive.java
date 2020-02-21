@@ -48,8 +48,5 @@ public class Drive extends SubsystemBase {
   public void arcadeDrive(double speed, double rotation) {
     differentialDrive.arcadeDrive(speed, rotation);
   }
-  public void arcadeDrive(double speed, double rotation, boolean squareInput) {
-    differentialDrive.arcadeDrive(speed, rotation, squareInput);
-  }
 
 }

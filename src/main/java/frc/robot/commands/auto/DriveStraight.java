@@ -1,10 +1,3 @@
-/*----------------------------------------------------------------------------*/
-/* Copyright (c) 2019 FIRST. All Rights Reserved.                             */
-/* Open Source Software - may be modified and shared by FRC teams. The code   */
-/* must be accompanied by the FIRST BSD license file in the root directory of */
-/* the project.                                                               */
-/*----------------------------------------------------------------------------*/
-
 package frc.robot.commands.auto;
 
 import edu.wpi.first.wpilibj.Timer;
@@ -27,7 +20,7 @@ public class DriveStraight extends CommandBase {
     this.drive = drive;
     addRequirements(drive);
     this.speed = speed;
-    this.timer = new Timer(); // Keeps track of time elapsed since .start() is called
+    this.timer = new Timer(); // Keeps track of time elapsed since command is initialized (not instantiated)
     timer.start();
     this.duration = Math.max(0, duration); // enforces domain of input
   }

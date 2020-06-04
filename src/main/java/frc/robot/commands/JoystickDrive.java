@@ -1,10 +1,3 @@
-/*----------------------------------------------------------------------------*/
-/* Copyright (c) 2019 FIRST. All Rights Reserved.                             */
-/* Open Source Software - may be modified and shared by FRC teams. The code   */
-/* must be accompanied by the FIRST BSD license file in the root directory of */
-/* the project.                                                               */
-/*----------------------------------------------------------------------------*/
-
 package frc.robot.commands;
 
 import edu.wpi.first.wpilibj.Joystick;
@@ -30,8 +23,8 @@ public class JoystickDrive extends CommandBase {
   @Override
   public void end(boolean interrupted) {
     /* 
-     * The drive subsystem will maintain the speed we last set it to, so we'll do the polite thing and
-     * set the speed to 0 once we are done with it.
+     * The drive subsystem maintains the speed it was last set it to, so it is set to (0, 0) when this
+     * command ends to prevent the robot from losing control.
      */
     drive.arcadeDrive(0, 0);
   }

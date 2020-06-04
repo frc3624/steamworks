@@ -1,10 +1,3 @@
-/*----------------------------------------------------------------------------*/
-/* Copyright (c) 2018-2019 FIRST. All Rights Reserved.                        */
-/* Open Source Software - may be modified and shared by FRC teams. The code   */
-/* must be accompanied by the FIRST BSD license file in the root directory of */
-/* the project.                                                               */
-/*----------------------------------------------------------------------------*/
-
 package frc.robot;
 
 import edu.wpi.first.wpilibj.Joystick;
@@ -33,9 +26,6 @@ public class RobotContainer {
   private final SwitchGear switchGear = new SwitchGear(gearShift);
   private final ClimbCommand climbCommand = new ClimbCommand(climb);
   
-  /*
-   * Drives straight forward at 1/4th speed for 3 seconds, and then drives backwards at 1/2 speed for 1.5 seconds.
-   */
   private final Command autoCommand = CommandGroupBase.sequence(new DriveStraight(drive, .25, 3), new DriveStraight(drive, .5, 1.5));
 
   public RobotContainer() {

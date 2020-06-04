@@ -26,16 +26,12 @@ public class Climb extends SubsystemBase {
    */
   public void set(double speed) {
     /*
-     * The climb subsystem was designed in such a way that it can only rotate in one way.
-     * If it tries to rotate backwards (in the negative voltage direction like climbMotor.set(-1)),
-     * it will break.
-     * We can use the fact that climbMotor is a private variable to our advantage. This method is the only way
-     * it is exposed to other places, so we can make sure it doesn't break by not letting anyone set speed to a negative value.
+     * The climb subsystem uses a ratchet gear, so the motor should only spin the gear one way.
+     * The Talon was installed so that the positive direction is the correct direction, so all values < 0
+     * are denied so that the ratchet gear doesn't break.
      */
-    climbMotor.set(Math.max(0, speed));
-    /*
-     * Now, any negative value will just be replaced with 0.
-     */
+    speed = Math.max(0, speed);
+    climbMotor.set(speed);
   }
 
 }

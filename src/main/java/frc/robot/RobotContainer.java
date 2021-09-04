@@ -21,6 +21,7 @@ public class RobotContainer {
   private final Drive drive = new Drive();
   private final GearShift gearShift = new GearShift();
   private final Climb climb = new Climb();
+  private final Limelight limelight = new Limelight();
 
   private final JoystickDrive joystickDrive = new JoystickDrive(joystick, drive);
   private final SwitchGear switchGear = new SwitchGear(gearShift);
